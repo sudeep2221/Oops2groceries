@@ -14,11 +14,11 @@ public class CheckOut {
 	static double costtop;
 	
 	static Random rand = new Random();
-        static double  a = rand.nextDouble()*3+1;
-	static double b=rand.nextDouble()*2.5 + 1.5;
+        static double  unitpriceP = rand.nextDouble()*3+1;
+	static double unitpriceE=rand.nextDouble()*2.5 + 1.5;
 
-	static Potatoe p = new Potatoe(namep, wtp, a);
-	static Egg e = new Egg(nameE, negg, b);
+	static Potatoe p = new Potatoe(namep, wtp, unitpriceP);
+	static Egg e = new Egg(nameE, negg,  unitpriceE);
 	static Sundae s = new Sundae(nameS, costIC, costtop);
 
 	public static void costCalculatoin() {
