@@ -9,6 +9,9 @@ public class Sundae extends IceCream {
 		super(name, costoficecream);
 		this.costofthetopping = costofthetopping;
 	}
+	public String toString(){
+		return getName();
+	}
 
 	public double getCost() {
 
