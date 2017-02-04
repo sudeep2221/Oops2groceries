@@ -32,15 +32,15 @@ public class CheckOut {
 
 		if (type.equals("Potato")) {
 			p.methodP();
-			System.out.println("the total cost  of " + p.weightinpound + " pounds " + p.getName() + " is " + p.getCost()
-					+ " in pound Sterling");
+			System.out.println(p.toString()+" total cost: $"+ p.getCost());
+			
 		} else if (type.equals("Egg")) {
 			e.methodE();
-			System.out.println("the total cost  of " + e.numofegg + " " + e.getName() + " is " + e.getCost()
-					+ " in pound Sterling");
+			System.out.println(e.toString()+" total cost: $" + e.getCost());
+			
 		} else if (type.equals("Sundae")) {
 			s.methodS();
-			System.out.println("the total cost  of " + s.getName() + " is " + s.getCost() + " in pound Sterling");
+			System.out.println(s.toString()+" total cost: $"+ s.getCost());
 		} else {
 			throw new InputMismatchException();
 		}
