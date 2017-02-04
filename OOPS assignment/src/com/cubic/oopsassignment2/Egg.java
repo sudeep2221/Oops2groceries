@@ -12,6 +12,9 @@ public class Egg extends RetailItem {
 		this.priceperdozen = priceperdozen;
 
 	}
+	public String toString(){
+		return getName()+" "+numofegg+" of eggs";
+	}
 
 	public double getCost() {
 		double d = numofegg * priceperdozen;
