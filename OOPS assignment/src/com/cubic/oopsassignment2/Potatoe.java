@@ -10,6 +10,10 @@ public class Potatoe extends RetailItem {
 		this.weightinpound = weightinpound;
 		this.priceperpound = priceperpound;
 	}
+	
+	public String toString(){
+		return getName()+" "+weightinpound+" lb";
+	}
 
 	public double getCost() {
 		return (weightinpound) * (priceperpound);
