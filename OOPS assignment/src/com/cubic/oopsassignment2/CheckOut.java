@@ -1,6 +1,7 @@
 package com.cubic.oopsassignment2;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.Random;
 
 public class CheckOut {
 	static String type;
@@ -11,9 +12,13 @@ public class CheckOut {
 	static String nameS;
 	static double costIC;
 	static double costtop;
+	
+	static Random rand = new Random();
+        static double  a = rand.nextDouble()*3+1;
+	static double b=rand.nextDouble()*2.5 + 1.5;
 
-	static Potatoe p = new Potatoe(namep, wtp, 2.30);
-	static Egg e = new Egg(nameE, negg, 3.03);
+	static Potatoe p = new Potatoe(namep, wtp, a);
+	static Egg e = new Egg(nameE, negg, b);
 	static Sundae s = new Sundae(nameS, costIC, costtop);
 
 	public static void costCalculatoin() {
