@@ -30,15 +30,15 @@ public class CheckOut {
 
 		type = sc.nextLine();
 
-		if (type.equals("Potato")) {
+		if (type.equalsIgnoreCase("Potato")) {
 			p.methodP();
 			System.out.println(p.toString()+" total cost: $"+ p.getCost());
 			
-		} else if (type.equals("Egg")) {
+		} else if (type.equalsIgnoreCase("Egg")) {
 			e.methodE();
 			System.out.println(e.toString()+" total cost: $" + e.getCost());
 			
-		} else if (type.equals("Sundae")) {
+		} else if (type.equalsIgnoreCase("Sundae")) {
 			s.methodS();
 			System.out.println(s.toString()+" total cost: $"+ s.getCost());
 		} else {
