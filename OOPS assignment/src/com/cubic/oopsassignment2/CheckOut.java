@@ -1,7 +1,8 @@
 package com.cubic.oopsassignment2;
+import java.text.DecimalFormat;
 import java.util.InputMismatchException;
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class CheckOut {
 	static String type;
@@ -13,12 +14,14 @@ public class CheckOut {
 	static double costIC;
 	static double costtop;
 	
+	static DecimalFormat f=new DecimalFormat("##.00");
+	
 	static Random rand = new Random();
-        static double  unitpriceP = rand.nextDouble()*3+1;
-	static double unitpriceE=rand.nextDouble()*2.5 + 1.5;
+    static double  a = rand.nextDouble()*3+1;
+	static double b=rand.nextDouble()*2.5 + 1.5;
 
-	static Potatoe p = new Potatoe(namep, wtp, unitpriceP);
-	static Egg e = new Egg(nameE, negg,  unitpriceE);
+	static Potatoe p = new Potatoe(namep, wtp, a);
+	static Egg e = new Egg(nameE, negg, b);
 	static Sundae s = new Sundae(nameS, costIC, costtop);
 
 	public static void costCalculatoin() {
@@ -32,15 +35,16 @@ public class CheckOut {
 
 		if (type.equalsIgnoreCase("Potato")) {
 			p.methodP();
-			System.out.println(p.toString()+" total cost: $"+ p.getCost());
+			System.out.println(p.toString()+" total cost: $"+f.format(p.getCost()));
 			
 		} else if (type.equalsIgnoreCase("Egg")) {
 			e.methodE();
-			System.out.println(e.toString()+" total cost: $" + e.getCost());
+			System.out.println(e.toString()+" total cost: $" +f.format(e.getCost()));
 			
 		} else if (type.equalsIgnoreCase("Sundae")) {
 			s.methodS();
-			System.out.println(s.toString()+" total cost: $"+ s.getCost());
+			System.out.println(s.toString()+" total cost: $"+ f.format(s.getCost()));
+			
 		} else {
 			throw new InputMismatchException();
 		}
